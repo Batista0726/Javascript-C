@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+            background-color: gray;
+            font-family: "Madimi One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+    <h1>Detalhes do Competidor</h1>
+    <label for="code">Código:</label>
+    <input type="number" id="code" placeholder="Insira o código"><br>
+    <label for="age">Idade:</label>
+    <input type="number" id="age" placeholder="Insira a idade"><br>
+    <label for="height">Altura (em metros):</label>
+    <input type="number" id="height" step="0.01" placeholder="Insira a altura"><br>
+    <label for="weight">Peso (em Kg):</label>
+    <input type="number" id="weight" step="0.01" placeholder="Insira o peso"><br>
+    <button onclick="displayDetails()">Exibir Detalhes</button>
+    <p id="aparecer"></p>
+
+    <script>
+        function displayDetails() {
+            const code = parseInt(document.getElementById("code").value);
+            const age = parseInt(document.getElementById("age").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const weight = parseFloat(document.getElementById("weight").value);
+
+            const output = `O competidor ${code}, tem ${age} anos, pesa ${weight.toFixed(2)} Kg e tem ${height.toFixed(2)} metros de altura.`;
+            document.getElementById("aparecer").textContent = output;
+        }
+    </script>
+</body>
+
+</html>

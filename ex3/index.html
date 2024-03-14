@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <title>Ex3</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+            background-color: gray;
+            font-family: "Madimi One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <h1>Inserção de Números</h1>
+    <label for="num1">Número 1:</label>
+    <input id="num1" type="number" value="50"><br>
+    <label for="num2" type="number">Número 2:</label>
+    <input id="num2" type="text" value="50"><br>
+    <button onclick="myFunction()">Mostrar números</button>
+    <p id="show"></p>
+
+    <script>
+        function myFunction() {
+            const num1 = parseInt(document.getElementById("num1").value);
+            const num2 = parseInt(document.getElementById("num2").value);
+            document.getElementById("show").textContent = num1 + " , " + num2;
+        }
+    </script>
+
+</body>
+
+</html>
