@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-    <title>Ex3</title>
+    <title>Contador</title>
 </head>
 
 <body>
@@ -24,24 +25,22 @@
             font-style: normal;
         }
     </style>
-    <h1>Inserção de Números</h1>
-    <label for="num1">Número 1:</label>
-    <input id="num1" type="number" value="50"><br>
-    <label for="num2" type="number">Número 2:</label>
-    <input id="num2" type="text" value="50"><br>
-    <button onclick="myFunction()">Mostrar números</button>
-    <p id="show"></p>
+    <h1>Contador até 100</h1>
+    <label for="num">Número:</label>
+    <input type="number" id="num" placeholder="Insira um número"><br>
+    <button onclick="conta()">Iniciar Contagem</button>
+    <p id="aparecer"></p>
 
     <script>
-        function myFunction() {
-            const num1 = parseInt(document.getElementById("num1").value);
-            const num2 = parseInt(document.getElementById("num2").value);
-            document.getElementById("show").textContent = num1 + " , " + num2;
+        function conta() {
+            let num = parseInt(document.getElementById("num").value);
+            let output = '';
+            for(let i = num; i <= 100; i++) {
+                output += i + ' ';
+            }
+            document.getElementById("aparecer").textContent = output;
         }
     </script>
-        <div class="right">
-            <img src="../ex3/ex3.png" alt="">
-        </div>
 </body>
 
 </html>
